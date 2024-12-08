@@ -33,9 +33,8 @@ export async function getStaticPaths() {
 }
 
 const { data, render, slug } = Astro.props;
-const { title, image, author, date } = data;
+const { title, image, author, date, categories } = data;
 const { Content } = await render();
-const categories = await getTaxonomy(post_folder, "categories");
 const postEntries = await getCollection(
   "posts",
   ({ data, id }) => !id.startsWith("-") && !data.draft,
@@ -49,13 +48,13 @@ const relatedPosts = similerItems(Astro.props, postEntries, slug);
       <div class="row">
         <div class="lg:col-8">
           <article>
-            <div class="relative">
+            <div class="relative ">
               {
                 image && (
                   <Image
                     src={image}
                     height={500}
-                    width={1000}
+                    width={600}
                     alt={title}
                     class="rounded-lg"
                     format="webp"

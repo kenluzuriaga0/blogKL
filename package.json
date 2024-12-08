@@ -2,7 +2,7 @@
   "name": "kenluzuriaga",
   "version": "2.0.0",
   "description": "",
-  "author": "statichunt",
+  "author": "kenluzu",
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "scripts": {
@@ -13,6 +13,7 @@
     "remove-darkmode": "node scripts/removeDarkmode.js && yarn format"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/mdx": "^2.1.1",
     "@astrojs/react": "^3.0.9",
     "@astrojs/rss": "^4.0.5",
@@ -26,6 +27,7 @@
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
+    "lightbox2": "^2.11.5",
     "marked": "^12.0.0",
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-tailwindcss": "^0.5.11",
@@ -37,7 +39,6 @@
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",
     "swiper": "^11.0.6",
-    "@astrojs/check": "^0.9.4",
     "typescript": "^5.7.2"
   },
   "devDependencies": {

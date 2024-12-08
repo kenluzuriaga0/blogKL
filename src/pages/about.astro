@@ -7,19 +7,23 @@ import { getEntry } from "astro:content";
 
 const { data, render } = await getEntry("about", "-index");
 const { Content } = await render();
-const { title, image, education, experience } = data as AboutPage;
+const { title, image, images, education, experience } = data as AboutPage;
 ---
 
 <Base {...data}>
-  <section class="section mt-16">
+  <section class="section mt-1">
     <div class="container text-center">
+      <h1
+        class="h1 text-left lg:text-[55px] mt-1 mb-4"
+        set:html={markdownify(title)}
+      />
       {
         image && (
-          <div class="mb-8">
+          <div class="mb-8 center-image">
             <Image
               src={image}
-              width={1298}
-              height={616}
+              width={360}
+              height={316}
               alt={title}
               class="rounded-lg"
               format="webp"
@@ -27,13 +31,7 @@ const { title, image, education, experience } = data as AboutPage;
           </div>
         )
       }
-
-      <h1
-        class="h1 text-left lg:text-[55px] mt-12"
-        set:html={markdownify(title)}
-      />
-
-      <div class="content text-left">
+      <div class="text-left text-xl">
         <Content />
       </div>
 
@@ -81,6 +79,37 @@ const { title, image, education, experience } = data as AboutPage;
           </div>
         </div>
       </div>
+
+
+      <div class="grid grid-cols-3 gap-4 mt-24">
+        {images.map((image) => (
+          <a href={image.src} class="col-span-1" data-title={image.alt} data-lightbox="gallery" >
+            <img src={image.src} alt={image.alt} class="w-full h-auto rounded image-item" />
+          </a>
+        ))}
+      </div>
     </div>
   </section>
+
+  <style>
+  
+    
+    .image-item {
+      width: 100%;
+      cursor: pointer;
+      border: 2px solid #eee;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+    }
+    
+    .image-item:hover {
+      transform: scale(1.05);
+    }
+    </style>
+    
 </Base>
+<!-- Import full-view of images -->
+<link href="../../public/vendor/css/lightbox.min.css" rel="stylesheet" />
+<script src="../../public/vendor/js/lightbox.min.js" defer></script>
+<script src="../../public/vendor/js/lightbox-plus-jquery.min.js"></script>
+

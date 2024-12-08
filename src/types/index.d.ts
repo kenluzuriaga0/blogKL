@@ -49,6 +49,10 @@ export interface AboutPage {
     title: string;
     list: Array<string>;
   };
+  images: Array<{
+    src: string;
+    alt: string;
+  }>;
 }
 
 // contact page type definition

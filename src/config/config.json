@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Geeeky Astro",
-    "base_url": "https://example.com",
+    "title": "Ken Luzuriaga",
+    "base_url": "https://kenluzuriaga.netlify.app",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
@@ -9,7 +9,7 @@
     "logo_darkmode": "/images/logo-darkmode.png",
     "logo_width": "150",
     "logo_height": "39",
-    "logo_text": "Geeky"
+    "logo_text": "Ken Luzuriaga"
   },
 
   "settings": {
@@ -28,17 +28,17 @@
 
   "params": {
     "contact_form_action": "#",
-    "footer_content": "Lorem ipsum dolor sit amt, conse adip iscing. donec iaculis tempasus laoreet. Libero ullam rgscper.",
-    "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/)"
+    "footer_content": "Welcome! This blog is my space for thoughts. Have fun, and I hope you discover something new!",
+    "copyright": "2024 © [Ken Luzuriaga](https://kenluzuriaga.netlify.app/). All Right Reserved."
   },
 
   "widgets": {
     "about": {
       "enable": true,
-      "content": "Lorem ipsum dolor sit amet, conse tfctetur adipiscing elit. Vel in in donec iaculis tempasus odio nunc laoreet . Libero ullam rgscorper."
+      "content": "Welcome! This blog is my space for thoughts. Have fun, and I hope you discover something new!"
     },
     "featured_posts": {
-      "enable": true,
+      "enable": false,
       "title": "Blog Categories",
       "showPost": 3
     },
@@ -47,7 +47,7 @@
       "title": "Blog Categories"
     },
     "newsletter": {
-      "enable": true,
+      "enable": false,
       "title": "Newsletter",
       "content": "Join thousands of Tiny Salt subscribers and get our best recipes delivered each week!",
       "privacy_policy_page": "/privacy-policy",
@@ -61,7 +61,7 @@
   },
 
   "metadata": {
-    "meta_author": "statichunt",
+    "meta_author": "kenluzu",
     "meta_image": "/images/og-image.png",
     "meta_description": "astro and tailwind boilerplate"
   },

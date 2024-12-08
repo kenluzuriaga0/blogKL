@@ -1,9 +1,9 @@
 ---
 banner:
-  title: Welcome **!**
-  title_small: "to John Bravo's Blog"
-  content: Are Developer and recently started your own business Already made website to ensure presence wants to develop.
-  image_enable: true
+  title: Ken Luzuriaga
+  title_small: "Software Engineer"
+  content: Technology enthusiastic with a huge intellectual curiosity. I have experience in teamwork and I focus in backend development technologies but always willing to learn new TI areas like devOps, frontend, data engineering.
+  image_enable: false
   image: /images/banner-author.png
   button:
     enable: true
@@ -12,11 +12,11 @@ banner:
     rel: ""
 
 featured_posts:
-  enable: true
+  enable: false
   title: Featured Posts
 
 promotion:
-  enable: true
+  enable: false
   image: /images/promotion.png
   link: "#"
 

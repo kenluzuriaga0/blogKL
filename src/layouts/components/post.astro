@@ -14,35 +14,20 @@ const { body, slug } = Astro.props;
 ---
 
 <div class="post">
-  <div class="relative">
+  <div >
     {
       image && (
         <Image
           class="rounded"
           src={image}
           alt={title}
-          width={405}
-          height={208}
+          width={200}
+          height={108}
           format="webp"
         />
       )
     }
 
-    <ul class="absolute top-3 left-2 flex flex-wrap items-center">
-      {
-        categories?.map((tag, index) => (
-          <li class="m-2 inline-flex h-7 rounded-[35px] bg-primary px-3 text-white">
-            <a
-              aria-label="categories"
-              class="capitalize"
-              href={`/categories/${slugify(tag)}`}
-            >
-              {tag}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
   </div>
   <h3 class="h5 mb-2 mt-4">
     <a href={`/${post_folder}/${slug}`} class="block py-0.5 hover:text-primary">
